@@ -1,7 +1,7 @@
 # ☕ Coffee Shop Sales Analytics — Executive Power BI Dashboard & MySQL ETL
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=78350F,D97706,FBBF24&height=220&section=header&text=Coffee%20Shop%20Sales%20Analytics&fontSize=40&fontColor=ffffff&fontAlignY=38&desc=Power%20BI%20Executive%20Dashboard%20%26%20MySQL%20Business%20Intelligence&descSize=16&descAlignY=60&descAlign=50" width="100%" alt="Coffee Shop Sales Analytics Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:78350F,50:D97706,100:FBBF24&customColorList=78350F,D97706,FBBF24&height=220&section=header&text=Coffee%20Shop%20Sales%20Analytics&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Power%20BI%20Executive%20Dashboard%20%26%20MySQL%20Business%20Intelligence&descSize=15&descAlignY=60&descAlign=50" width="100%" alt="Coffee Shop Sales Analytics Banner" />
 </p>
 
 <p align="center">
@@ -192,5 +192,5 @@ Contributions, bug reports, and architectural discussions are welcome!
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=78350F,D97706,FBBF24&height=100&section=footer" width="100%" alt="Footer Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:78350F,50:D97706,100:FBBF24&customColorList=78350F,D97706,FBBF24&height=100&section=footer" width="100%" alt="Footer Banner" />
 </p>
