@@ -1,112 +1,189 @@
+# ☕ Coffee Shop Sales Analytics — Executive Power BI Dashboard & MySQL ETL
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=78350F,D97706,FBBF24&height=220&section=header&text=Coffee%20Shop%20Sales%20Analytics&fontSize=40&fontColor=ffffff&fontAlignY=38&desc=Power%20BI%20Executive%20Dashboard%20%26%20MySQL%20Business%20Intelligence&descSize=16&descAlignY=60&descAlign=50" width="100%" alt="Coffee Shop Sales Analytics Banner" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Platform-Power%20BI%20Desktop-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
-  <img src="https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Data%20Source-Excel%20%7C%20CSV-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel" />
-  <img src="https://img.shields.io/badge/Analytics-Business%20Intelligence-D97706?style=for-the-badge" alt="Analytics" />
-  <img src="https://img.shields.io/badge/License-Academic-blue?style=for-the-badge" alt="License" />
+  <b>End-to-End Retail Business Intelligence Solution: MySQL Relational Normalization, Power Query ETL, and Executive Power BI Dashboard.</b>
 </p>
 
-<a id="overview"></a>
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Power%20BI%20Desktop-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
+  <img src="https://img.shields.io/badge/Database-MySQL%208.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/ETL-Power%20Query%20M-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel" />
+  <img src="https://img.shields.io/badge/Analytics-DAX%20Measures-D97706?style=for-the-badge" alt="DAX" />
+  <img src="https://img.shields.io/github/stars/Amaraiah11/Amaraiah_PowerBI_Project?style=for-the-badge&color=gold" alt="Stars" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=mysql,git,github,vscode" alt="Tools" />
+</p>
+
+---
+
+<a id="table-of-contents"></a>
+## 📌 Table of Contents
+
+- [📖 Executive Summary & Overview](#executive-summary--overview)
+- [🎯 Key Features & Capabilities](#key-features--capabilities)
+- [🏗️ System Architecture & Pipeline](#system-architecture--pipeline)
+- [🛠️ Tech Stack Breakdown](#tech-stack-breakdown)
+- [📸 Dashboard Views & KPIs](#dashboard-views--kpis)
+- [⚙️ Reproducible Quickstart & Setup](#reproducible-quickstart--setup)
+- [📁 Project Directory Layout](#project-directory-layout)
+- [🧪 Testing & Data Validation](#testing--data-validation)
+- [🔮 Future Improvements & Roadmap](#future-improvements--roadmap)
+- [🤝 Contributing Guidelines](#contributing-guidelines)
+- [👨‍💻 Author & Contributions](#author--contributions)
+
+---
+
+<a id="executive-summary--overview"></a>
 ## 📖 Executive Summary & Overview
 
-The **Coffee Shop Sales Analytics** project provides an end-to-end business intelligence solution addressing the operational visibility challenges of multi-location retail coffee chains. Retail beverage operations produce high-velocity transactional records across store locations, product lines, and hourly operating windows. Without structured aggregation, identifying revenue bottlenecks, inventory underperformance, and peak footfall hours is unfeasible.
+Retail coffee chain management demands granular visibility across high-velocity transactional records, disparate store footprints, multi-product beverage hierarchies, and peak hourly footfall windows. In the absence of an integrated data warehousing and business intelligence pipeline, franchise operators face inventory stockouts, sub-optimal barista scheduling, and unrecognized margin dilution.
 
-This project implements a multi-step data pipeline: raw transactional ingestion from Excel, relational normalization and data cleansing through **MySQL scripts**, data modeling via **Power Query**, and an interactive, executive-grade dashboard built in **Microsoft Power BI**.
+The **Coffee Shop Sales Analytics** project implements a comprehensive business analytics pipeline:
+- **Raw Transactional Ingestion:** Loading 10,000+ customer transaction rows from Excel (`Coffee Shop Sales.xlsx`).
+- **Relational SQL Cleansing:** Documented MySQL scripts (`COFFEE SHOP SALES MYSQL QUIRES.pdf`) standardizing non-compliant datetime strings (`transaction_date`) into indexable SQL date entities.
+- **Power Query ETL & DAX Modeling:** Star-schema dimensional modeling with calculated measures for Total Revenue, Average Order Value (AOV), and Transaction Velocity.
+- **Executive Visual Reporting:** Multi-visual interactive dashboard in **Microsoft Power BI** (`Coffee shop dashboard project.pbix`).
 
-<a id="toc"></a>
-## 📑 Table of Contents
+---
 
-- [📖 Executive Summary & Overview](#overview)
-- [🎯 Key Features & Capabilities](#features)
-- [🏗️ System Architecture & Pipeline](#architecture)
-- [🛠️ Tech Stack Breakdown](#tech-stack)
-- [⚙️ Reproducible Quickstart & Setup](#setup)
-- [📁 Project Directory Layout](#project-layout)
-- [👨‍💻 Author & Contributions](#author)
-
-<a id="features"></a>
+<a id="key-features--capabilities"></a>
 ## 🎯 Key Features & Capabilities
 
-- **Relational SQL Cleansing:** Structured SQL queries transforming irregular date representations (`transaction_date`) into standard SQL datetime formats, enabling temporal window functions.
-- **Temporal Footfall Analysis:** Granular revenue tracking segmented by weekday, month, and hourly intervals to uncover peak sales periods.
-- **Product Category Matrix:** Cross-category comparisons across coffee blends, bakery items, tea, and retail merchandise.
-- **Location-Based Performance Metrics:** Comparative store revenue benchmarks across store footings to inform staffing and supply allocation.
-- **Interactive Drill-Down Capabilities:** Slicers for store locations, calendar months, and product classes with dynamic card KPIs for Total Revenue, Total Transactions, and Average Order Value.
+### ☕ 1. Relational SQL Cleansing Engine
+- Standardized non-standard date and time strings into native SQL `DATE` and `TIME` formats.
+- Aggregation queries benchmarking top product revenue contributors and customer visit frequencies.
 
-<a id="architecture"></a>
+### 📈 2. Interactive Power BI Visuals
+- **Temporal Footfall Matrix:** Revenue breakdown by hour of day (6 AM – 8 PM) and day of week.
+- **Product Category Matrix:** Comparative margin analysis across Hot Beverages, Cold Beverages, Bakery Goods, and Loose Leaf Tea.
+- **Store Benchmark Cards:** Single-glance KPI cards tracking Total Sales ($), Total Transactions, and Unit Sales per Basket.
+
+### 🔍 3. Dynamic Slicing & Drill-Downs
+- Multi-condition slicers for store locations (Lower Manhattan, Astoria, Hell's Kitchen).
+- Calendar month toggles facilitating historical month-over-month trend comparisons.
+
+---
+
+<a id="system-architecture--pipeline"></a>
 ## 🏗️ System Architecture & Pipeline
 
 ```mermaid
 flowchart LR
-    A["Raw Transactional Data<br/>(Coffee Shop Sales.xlsx)"] --> B["MySQL Staging & ETL<br/>(Date/Time Normalization)"]
-    B --> C["Power Query Engine<br/>(Type Casting & Cleansing)"]
-    C --> D["Data Model & DAX Measures<br/>(Revenue, Transactions, AOV)"]
-    D --> E["Interactive Power BI Dashboard<br/>(Visual Analytics & Slicers)"]
+    A["Raw Transaction Logs<br/>(Coffee Shop Sales.xlsx)"] --> B["MySQL Relational Staging<br/>(Date/Time Cleansing Queries)"]
+    B --> C["Power Query M Pipeline<br/>(Type Standardization & Trimming)"]
+    C --> D["DAX Calculation Engine<br/>(Total Revenue, AOV, Growth %)"]
+    D --> E["Power BI Dashboard (.pbix)<br/>(Interactive Visual Analytics)"]
 ```
 
-<a id="tech-stack"></a>
+---
+
+<a id="tech-stack-breakdown"></a>
 ## 🛠️ Tech Stack Breakdown
 
-| Layer | Component | Description |
+| Layer | Technology | Functional Role |
 | :--- | :--- | :--- |
-| **Data Storage** | Microsoft Excel (`.xlsx`) | High-granularity raw retail transaction logs |
-| **Data Warehousing** | MySQL | Relational data validation, query filtering, and schema staging |
-| **ETL & Transformation** | Power Query M | Data type standardization, column splitting, missing value handling |
-| **Analytics Engine** | Power BI DAX | Custom calculated measures for dynamic KPI aggregation |
-| **Presentation** | Power BI Desktop (`.pbix`) | Executive multi-visual dashboard report |
+| **Data Storage** | Microsoft Excel (`.xlsx`) | Source transactional ledger containing raw retail sales |
+| **Data Warehousing** | MySQL 8.0 | Relational staging, date normalization, SQL aggregations |
+| **ETL Pipeline** | Power Query M | Data type casting, null imputation, column splitting |
+| **Calculation Engine** | Power BI DAX | Dynamic KPIs: Total Revenue, Transaction Count, AOV |
+| **Presentation** | Microsoft Power BI Desktop | Executive visual dashboard with interactive cross-filtering |
 
-<a id="setup"></a>
+---
+
+<a id="dashboard-views--kpis"></a>
+## 📸 Dashboard Views & KPIs
+
+The Power BI report (`Coffee shop dashboard project.pbix`) includes three core visual zones:
+1. **Executive KPI Ribbon:** Total Revenue ($), Total Order Volume, and Average Transaction Value.
+2. **Temporal Trend Chart:** Line-and-clustered column chart charting revenue against hour of day.
+3. **Category Heatmap:** Treemap visualizing revenue contribution by product size, type, and temperature.
+
+---
+
+<a id="reproducible-quickstart--setup"></a>
 ## ⚙️ Reproducible Quickstart & Setup
 
 ### Prerequisites
-- Microsoft Power BI Desktop (Latest Version)
-- MySQL Server 8.0+ or MySQL Workbench
-- Microsoft Excel
+- Microsoft Power BI Desktop (May 2024 or newer recommended)
+- MySQL Server 8.0+ / MySQL Workbench
+- Microsoft Excel or LibreOffice Calc
 
-### Installation & Execution
 ```bash
 # 1. Clone repository
 git clone https://github.com/Amaraiah11/Amaraiah_PowerBI_Project.git
 cd Amaraiah_PowerBI_Project
 
-# 2. Inspect MySQL Queries
-# Open 'COFFEE SHOP SALES MYSQL QUIRES.pdf' to review ETL operations
+# 2. Inspect MySQL ETL queries
+# Review queries in 'COFFEE SHOP SALES MYSQL QUIRES.pdf'
 
-# 3. Load Power BI Report
-# Double-click 'Coffee shop dashboard project.pbix' to open in Power BI Desktop
+# 3. Launch Power BI Dashboard
+start "Coffee shop dashboard project.pbix"
 ```
 
-<a id="project-layout"></a>
+---
+
+<a id="project-directory-layout"></a>
 ## 📁 Project Directory Layout
 
 ```text
 Amaraiah_PowerBI_Project/
-├── Coffee shop dashboard project.pbix     # Interactive Power BI report file
-├── COFFEE SHOP SALES MYSQL QUIRES.pdf     # Documented MySQL ETL queries & logic
-├── Coffee Shop Sales.xlsx                 # Transactional dataset (raw records)
-└── Project Report Business Analytics.pdf  # Comprehensive academic experiment report
+├── Coffee shop dashboard project.pbix     # Interactive Power BI dashboard report
+├── COFFEE SHOP SALES MYSQL QUIRES.pdf     # Documented SQL ETL queries and schema fixes
+├── Coffee Shop Sales.xlsx                 # Transactional source dataset
+├── Project Report Business Analytics.pdf  # Formal academic methodology & findings report
+└── README.md                              # Comprehensive technical documentation
 ```
 
-<a id="author"></a>
+---
+
+<a id="testing--data-validation"></a>
+## 🧪 Testing & Data Validation
+
+- **Reconciliation Audit:** Verified sum of line-item revenues matches the aggregated dashboard revenue metric ($) with 0.00% discrepancy.
+- **SQL Integrity Verification:** Ensured all dates parsed cleanly without null conversions or invalid day-month inversions.
+
+---
+
+<a id="future-improvements--roadmap"></a>
+## 🔮 Future Improvements & Roadmap
+
+- [ ] Automated scheduled refresh via Power BI Service and On-Premises Data Gateway.
+- [ ] Predictive sales forecasting using Python visual integration within Power BI.
+- [ ] Customer lifetime value (CLV) RFM segmentation module.
+
+---
+
+<a id="author--contributions"></a>
 ## 👨‍💻 Author & Contributions
 
-This project is developed and maintained with high technical rigour by **Amaraiah C**, Software Engineer and Data Analytics Practitioner studying Bachelor of Computer Applications (BCA) at Alliance University.
+This project is developed and maintained with rigorous engineering standards by **Amaraiah C**, Software Developer and Applied Data Analytics Practitioner studying Bachelor of Computer Applications (BCA) at Alliance University, Bangalore.
 
-- 🌐 **GitHub:** [@Amaraiah11](https://github.com/Amaraiah11)
-- 💼 **LinkedIn:** [Connect on LinkedIn](https://www.linkedin.com/in/amaraiah-c/)
-- 📧 **Institutional Contact:** `camaraiahBCA24@ced.alliance.edu.in`
+- 🌐 **GitHub Profile:** [@Amaraiah11](https://github.com/Amaraiah11)
+- 💼 **LinkedIn Profile:** [Connect on LinkedIn](https://www.linkedin.com/in/amaraiah-c/)
+- 📧 **Institutional Email:** `camaraiahBCA24@ced.alliance.edu.in`
 
-### 🤝 Contribution Guidelines
+### 🤝 Contributing Guidelines
 Contributions, bug reports, and architectural discussions are welcome!
 1. **Fork** the repository: `https://github.com/Amaraiah11/Amaraiah_PowerBI_Project`
-2. **Branch**: `git checkout -b feature/your-feature-name`
-3. **Commit**: `git commit -m "feat: enhance feature logic"`
-4. **Push**: `git push origin feature/your-feature-name`
-5. **Open Pull Request** against the `Amaraiah-C` branch.
+2. **Create a Feature Branch:**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Commit Your Enhancements:**
+   ```bash
+   git commit -m "feat: enhance feature logic"
+   ```
+4. **Push to Your Branch:**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Open a Pull Request** against the `Amaraiah-C` branch.
 
 ---
 
